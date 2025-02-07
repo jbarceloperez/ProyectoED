@@ -2,6 +2,7 @@ package banco;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.fail;
 
 public class CuentaTest {
     @Test
@@ -31,6 +32,17 @@ public class CuentaTest {
         Cuenta cuenta1 = new Cuenta("ES21092555879635214", 100);
         double saldo = cuenta1.retirarDinero(50);
         assertEquals(50, saldo, 1);
+    }
+
+    @Test
+    public void testIngresarDineroExcepcion() {
+        Cuenta cuenta1 = new Cuenta("ES21092555879635214", 100);
+        try {
+            cuenta1.ingresarDinero(-50);
+            fail("No ha saltado la excepción.");
+        } catch (ArithmeticException e) {
+            // Test correcto
+        }
     }
 
 }

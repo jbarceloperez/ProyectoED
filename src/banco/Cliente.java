@@ -33,16 +33,24 @@ public class Cliente {
 
     public double ingresarDinero(Cuenta cuenta, double importe) {
         if (cuenta.getTitular().equals(this)) {
-            return cuenta.ingresarDinero(importe);
+            try {
+                return cuenta.ingresarDinero(importe);
+            } catch (ArithmeticException e) {
+                System.err.println("Error: " + e.getMessage());
+            }
         }
-        else return ERROR;
+        return ERROR;
     }
 
     public double retirarDinero(Cuenta cuenta, double importe) {
         if (cuenta.getTitular().equals(this)) {
-            return cuenta.retirarDinero(importe);
+            try {
+                return cuenta.retirarDinero(importe);
+            } catch (ArithmeticException e) {
+                System.err.println("Error: " + e.getMessage());
+            }
         }
-        else return ERROR;
+        return ERROR;
     }
 
     @Override
