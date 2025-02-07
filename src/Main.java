@@ -8,7 +8,7 @@ public class Main {
         //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
         // to see how IntelliJ IDEA suggests fixing it.
         System.out.println("Proyecto de ejemplo");
-
+        // cambio
         int [] lista = new int[10];
 
         for (int i = 0; i < 10; i++) {

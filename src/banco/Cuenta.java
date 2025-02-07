@@ -5,6 +5,7 @@ public class Cuenta {
     private double saldo;
     private Cliente titular;
 
+    // cambio
     public Cuenta(String numero, double saldo, Cliente titular) {
         this.numero = numero;
         this.saldo = saldo;
