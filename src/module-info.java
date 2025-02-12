@@ -1,0 +1,3 @@
+module ProyectoEntornos {
+    requires junit;
+}
