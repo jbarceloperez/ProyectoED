@@ -13,13 +13,13 @@ import java.util.Objects;
 public class Cliente {
 
     /** Código de error para operaciones fallidas. */
-    public static double ERROR = -9999.9999;
+    public static final double ERROR = -9999.9999;
 
     /** Nombre del cliente. */
     private String nombre;
 
     /** DNI del cliente, identificador único. */
-    private String dni;
+    private final String dni;
 
     /** Conjunto de cuentas asociadas al cliente. */
     private HashSet<Cuenta> cuentas;
@@ -60,15 +60,6 @@ public class Cliente {
      */
     public String getDni() {
         return dni;
-    }
-
-    /**
-     * Modifica el DNI del cliente.
-     *
-     * @param dni Nuevo DNI del cliente.
-     */
-    public void setDni(String dni) {
-        this.dni = dni;
     }
 
     /**
